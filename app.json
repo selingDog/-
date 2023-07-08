@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/detail/detail",
+    "pages/home/home",
+    "pages/menu/menu",
+    "pages/car/car",
+    "pages/my/my",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/myin/myin",
+    "pages/myaddress/myaddress"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "咖啡商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./image/home.png",
+        "selectedIconPath": "./image/home_active.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "./image/menu.png",
+        "selectedIconPath": "./image/menu_active.png"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "text": "购物车",
+        "iconPath": "./image/shopbag.png",
+        "selectedIconPath": "./image/shopbag_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./image/my.png",
+        "selectedIconPath": "./image/my_active.png"
+      }
+    ],
+    "color": "#646566",
+    "selectedColor": "#0C34BA",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index"
+  }
+}
