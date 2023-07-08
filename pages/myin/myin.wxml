@@ -1,0 +1,35 @@
+<view>
+  <view class="username">
+    <!-- 头像 -->
+    <van-image class="img" round fit="cover" width="6rem" height="6rem" src="{{myinf.userImg}}" />
+  </view>
+  <van-cell-group>
+    <!-- 用户id -->
+    <van-field value="{{myinf.userId}}" label="用户id" left-icon="contact" readonly="{{readonly}}" border="{{ false }}" />
+    <!-- 手机号 -->
+    <van-field value="{{myinf.phone}}" label="手机号" left-icon="contact" readonly="{{readonly}}" border="{{ false }}" />
+    <van-field value="{{myinf.nickName}}" label="昵称" left-icon="contact" readonly="{{readonly}}" border="{{ false }}" />
+    <van-field value="{{myinf.desc}}" label="简介" left-icon="contact" readonly="{{readonly}}" placeholder="这个家伙很懒，什么也没有留下" border="{{ false }}" />
+  </van-cell-group>
+  <!-- <view>
+    <text>用户id</text>
+    <text>{{myinf.userId}}</text>
+  </view> -->
+  <!-- 手机号 -->
+  <!-- <view>
+    <text>手机号</text>
+    <text>{{myinf.phone}}</text>
+  </view> -->
+  <!-- 昵称 -->
+  <!-- <view>
+    <text>昵称</text>
+    <text>{{myinf.nickName}}</text>
+  </view> -->
+  <!-- 简介 -->
+  <!-- <text>简介</text>
+  <view wx:if="{{myinf.desc==''?false:true}}"><text>{{myinf.desc}}</text>
+  </view>
+  <view wx:if="{{myinf.desc==''?true:false}}">
+    <text>这个家伙很懒，什么也没有留下</text>
+  </view> -->
+</view>

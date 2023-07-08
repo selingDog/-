@@ -1,0 +1,36 @@
+<!--pages/home/home.wxml-->
+<view class="manibg">
+  <!-- 顶部栏 -->
+  <view class="top">
+    <!-- 问候语+用户名 -->
+    <view class="user">
+      <text>上午好</text>
+      <text bindtap="gologin">小黑子</text>
+    </view>
+      <!-- 搜索框 -->
+      <van-search placeholder="请输入搜索关键词" shape="round"  class="search" bind:focus="onSearch"/>
+    <!-- </view> -->
+  </view>
+
+  <!-- 轮播图 -->
+  <view calss="bannerimg">
+    <!-- 轮播图组件 -->
+    <swiper autoplay circular current="{{num}}" class="swi">
+      <!-- 轮播图项目 -->
+      <swiper-item wx:for="{{bannerarr}}" wx:key="index">
+        <image src="{{item.bannerImg}}" mode="" class="a1" />
+      </swiper-item>
+    </swiper>
+    <!-- 自定义指示点 -->
+    <view class="indication">
+      <!-- 当num的值等于循环的下标的时候，就让该组件的类名为active (选中状态)，否则类名为空 -->
+      <view wx:for="{{bannerarr}}" class='dian{{num==index?"active":""}}' wx:key="index"></view>
+    </view>
+  </view>
+  <!-- 商品列表 -->
+<view class="hot">
+  </view>
+  <view class="type">
+    <home-list arr="{{hotlist}}"></home-list>
+  </view>
+</view>

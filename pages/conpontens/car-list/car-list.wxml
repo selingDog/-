@@ -1,0 +1,28 @@
+<!--pages/conpontens/car-list.wxml-->
+<view class="main">
+  <view class="once" wx:if="{{item.count}}" wx:for="{{arr}}" wx:key="index" data-pid="{{item.pid}}">
+    <van-checkbox-group value="{{ checked }}" bind:change="onChange" data-checkcount="{{item.count}}" data-checkprice="{{item.price}}">
+      <van-checkbox name="{{item.sid}}"></van-checkbox>
+    </van-checkbox-group>
+    <view class="img">
+      <image src="{{item.small_img}}" class="image" mode="" />
+    </view>
+    <view class="name">
+      <view class="name1">
+        {{item.name}}
+      </view>
+      <view class="name2">
+        {{item.enname}}
+      </view>
+    </view>
+    <view class="select-count-box">
+      <view>
+      </view>
+      <view>
+        <text bindtap="sub" data-item="{{item}}" data-countt="{{item.count}}">-</text>
+        <text>{{item.count}}</text>
+        <text bindtap="add" data-item="{{item}}" data-countt="{{item.count}}">+</text>
+      </view>
+    </view>
+  </view>
+</view>

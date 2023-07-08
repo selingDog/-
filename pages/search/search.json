@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "homelist":"../conpontens/home-list/home-list",
+    "van-nav-bar": "@vant/weapp/nav-bar/index"
+  }
+  
+}

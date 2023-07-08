@@ -1,0 +1,51 @@
+<!--pages/my/my.wxml-->
+<!-- 用户背景 -->
+<view class="userbg">
+  <image src="{{mineobj.userBg}}" />
+</view>
+<!-- 用户资料 -->
+<view class="myuser">
+  <view class="username">
+    <!-- 头像 -->
+    <view class="img">
+      <image src="{{mineobj.userImg}}" />
+    </view>
+    <!-- 资料 -->
+    <view class="userpic">
+      <!-- 昵称 -->
+      <view><text>{{mineobj.nickName}}</text>
+      </view>
+      <!-- 简介 -->
+      <view wx:if="{{mineobj.desc==''?false:true}}"><text>{{mineobj.desc}}</text>
+      </view>
+      <view wx:if="{{mineobj.desc==''?true:false}}">
+        <text>这个家伙很懒，什么也没有留下</text>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view class="set">
+    <view  bindtap="gomyin">
+      <text>个人资料</text>
+      <van-icon name="arrow" />
+    </view>
+    <view>
+      <text>我的订单</text>
+      <van-icon name="arrow" />
+    </view>
+    <view>
+      <text>我的收藏</text>
+      <van-icon name="arrow" />
+    </view>
+    <view bindtap="gomyaddress">
+      <text>地址管理</text>
+      <van-icon name="arrow" />
+    </view>
+    <view>
+      <text>安全中心</text>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <!-- 背景色 -->
+  <view class="bg">
+  </view>

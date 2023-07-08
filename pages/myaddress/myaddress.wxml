@@ -1,0 +1,7 @@
+<!--pages/myaddress/myaddress.wxml-->
+<view>
+  <view wx:for="{{myaddress}}" wx:key="index">
+    <text>{{item.name}}   {{item.tel}}</text><br/>
+    <text>{{item.province}} {{item.city}}{{item.county}}{{item.addressDetail}}</text>
+  </view>
+</view>

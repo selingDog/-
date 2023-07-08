@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "carlist": "../conpontens/car-list/car-list",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-radio": "@vant/weapp/radio/index",
+  "van-radio-group": "@vant/weapp/radio-group/index"
+  }
+}

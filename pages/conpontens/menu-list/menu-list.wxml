@@ -1,0 +1,17 @@
+<!--pages/conpontens/menu-list/menu-list.wxml-->
+<view class="main">
+  <view class="once" wx:for="{{arr}}" wx:key="index" data-pid="{{item.pid}}" bindtap="godetail">
+    <view class="img">
+      <image src="{{item.smallImg}}" mode="" class="image" />
+    </view>
+    <view class="name1">
+      <text>{{item.name||item.enname}}</text>
+    </view>
+    <view class="name2">
+      <text>{{item.enname}}</text>
+    </view>
+    <view class="price" wx:if="{{item.price}}">
+      <text>￥{{item.price}}</text>
+    </view>
+  </view>
+</view>

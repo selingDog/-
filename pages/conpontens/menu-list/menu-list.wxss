@@ -1,0 +1,44 @@
+/* pages/conpontens/menu-list/menu-list.wxss */
+.mane{
+  padding: 10px;
+  background-color: #F7F8FA;
+}
+.once{
+  display: flex;
+  background-color: #ffffff;
+  margin-top: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+.img{
+  width: 80px;
+  height: 80px;
+}
+.img image{
+  width: 80px;
+  height: 80px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.name{
+  width: 150px;
+  height: 100%;
+  margin-left: 10px;
+}
+.name1{
+  color: #444444;
+}
+.name2{
+  color: #999999;
+  font-size: 12px;
+  width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.price{
+  color: tomato;
+  font-weight: bold;
+}

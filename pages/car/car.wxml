@@ -1,0 +1,9 @@
+<van-search placeholder="请输入搜索关键词" shape="round" bind:search="onSearch" />
+<view>
+  <carlist class="carlist" bindcarreplace="replace" wx:if="{{hotlist}}" arr="{{hotlist}}" radio="{{radio}}"></carlist>
+</view>
+<van-submit-bar price="{{ totalmoney*100 }}" button-text="提交订单" bind:submit="submitorder" tip="{{ true }}">
+  <van-tag type="primary">
+    <van-checkbox value="{{ radio }}" bind:change="changeallcheck">全选</van-checkbox>
+  </van-tag>
+</van-submit-bar>

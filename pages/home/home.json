@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "home-list":"../conpontens/home-list/home-list"
+  } 
+}

@@ -1,0 +1,47 @@
+/* pages/conpontens/home-list/home-list.wxss */
+.reqlist{
+  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.shangping{
+  width: 42%;
+  margin-top: 10px;
+  padding: 10px;
+  background-repeat: 10px;
+  position: relative;
+  background-color: #cccccc;
+}
+.shangping .remai{
+  background-color: #e4393c;
+  color: #ffffff;
+  width: 35px;
+  font-size: 12px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+}
+.shangping .image{
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+}
+.shangping .name{
+  color: #444444;
+  margin-top: 10px;
+}
+.shangping .enname{
+  margin-top: 3px;
+  color: #999999;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.shangping .price{
+  color: tomato;
+  font-weight: bold;
+}

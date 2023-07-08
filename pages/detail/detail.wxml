@@ -1,0 +1,80 @@
+<!--pages/detail/detail.wxml-->
+<view class="main">
+  <view class="img>">
+    <!-- 底层照片 -->
+    <image class="image" src="{{dataobj.large_img}}" mode="" />
+  </view>
+  <!-- 商品的介绍及规格 -->
+  <view class="introduce">
+    <!-- 商品的名字介绍和价格 -->
+    <view class="titname">
+      <!-- 左边标题（中文命和英文名） -->
+      <view class="nameleft">
+        <view>
+          <text>{{dataobj.name}}</text>
+        </view>
+        <view>
+          <text>{{dataobj.enname}}</text>
+        </view>
+      </view>
+      <!-- 右边的价格 -->
+      <view class="nameright">
+        <text>￥{{dataobj.price}}</text>
+      </view>
+    </view>
+    <!-- 商品的规格 -->
+    <view class="select">
+      <!-- 糖分 -->
+      <view class="selectitem" wx:if="{{sugar_desc==null?false:true}}">
+        <view>
+          <text>{{sugar_desc}}</text>
+        </view>
+        <view>
+          <text class="{{sugarindex==index?'active':''}}" wx:for="{{sugar}}" wx:key="index" data-text="{{item}}" data-index="{{index}}" bindtap="sugar">{{item}}</text>
+        </view>
+      </view>
+      <!-- 温度 -->
+      <view class="selectitem" wx:if="{{tem_desc==null?false:true}}">
+        <view>
+          <text>{{tem_desc}}</text>
+        </view>
+        <view>
+          <text class="{{temindex==index?'active':''}}" wx:for="{{tem}}" wx:key="index" data-text="{{item}}" data-index="{{index}}" bindtap="tem">{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 选择数量 -->
+    <view class="select-count-box">
+      <view>
+        <text>选择数量</text>
+      </view>
+      <view>
+        <text bindtap="sub">-</text>
+        <text>{{count}}</text>
+        <text bindtap="add">+</text>
+      </view>
+    </view>
+    <!-- 商品描述 -->
+    <view class="desc">
+      <view class="tit">
+        <text>商品描述</text>
+      </view>
+      <view>
+        <ul class="mains">
+          <li wx:for="{{arrs}}" wx:key="index">{{index+1}}、{{item}}</li>
+        </ul>
+      </view>
+    </view>
+  </view>
+  <!-- 购物栏 -->
+
+  <van-goods-action>
+    <van-goods-action-icon icon="bag" text="购物袋" bind:click="gocart" />
+    <!-- 如果商品未收藏↓ -->
+    <van-goods-action-icon icon="like-o" text="未收藏" wx:if="{{!isshow}}" bind:click="addcollect" />
+    <!-- 如果商品已收藏↓ -->
+    <van-goods-action-icon icon="like" text="已收藏" wx:if="{{isshow}}" bind:click="addcollect" />
+    <!-- 加入购物车 -->
+    <van-goods-action-button text="加入购物车" type="warning" color="#0c34ba" bind:click="addcart" />
+  </van-goods-action>
+</view>
